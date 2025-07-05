@@ -100,7 +100,6 @@ std::shared_ptr<const std::pair<int, Color>> lookup(int vertex, Color color)
 // one function mapping a set of vertices to 3 colors 
 using Coloring = std::vector<std::shared_ptr<const std::pair<int, Color>>>;
 
-std::chrono::nanoseconds hashTime = std::chrono::nanoseconds(0);
 struct ColoringHash 
 {
     std::size_t operator()(const Coloring& key) const noexcept
@@ -200,11 +199,7 @@ struct Bag
             {
                 if (current.size() == bagsize)
                 {
-                    auto start1 = std::chrono::high_resolution_clock::now();
                     map[current] = std::numeric_limits<int>::max();
-                    auto end1 = std::chrono::high_resolution_clock::now();
-                    auto duration1 = std::chrono::duration_cast<std::chrono::nanoseconds>(end1 - start1);
-                    hashTime += duration1;
                     return;
                 }
                 for (const auto &color : colorArr)

@@ -98,7 +98,7 @@ if __name__ == "__main__":
             print("computing optimal TD (NP-hard) using sage...")
             # computing an optimal TD is an NP-complete problem and thus the complexity of the next line dwarfes every
             # other operation in this script
-            TD_G = G.treewidth(certificate=True, k=16)
+            TD_G = G.treewidth(certificate=True)
             print("...finished computing optimal TD, width: ", width_of_tree_decomposition(G, TD_G))
         else:
             TD_G = read_td(input_td)
