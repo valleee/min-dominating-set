@@ -12,4 +12,4 @@ The implemented programs make use of `sage` to compute graphs, tree-decompositio
 Run `g++ -O3 decomp.cpp -o decomp` or `g++ -O3 decompNoHash.cpp -o decompNoHash` respectively to compile.</br>
 Then you can run `./decomp file.gr` to let sage create a nice-TD of the graph described in `file.gr` and then run the algorithm on it.</br>
 You can also rin `./decomp file.gr file.td` to skip the expensive TD creation, if you already have a TD of the `.gr` file saved in the `.td` file. The python script will check, that it is indeed a valid TD of this graph.</br>
-(You can also just run the python-script as a standalone to cerate TDs, or output data about the created structures which are then processed by the algorithm.)
+(You can also just run the python-script as a standalone to create TDs or output data about the created structures which are to be processed by the algorithm.)
